@@ -35,21 +35,32 @@ To get started with KrishiConnect, follow these steps:
 1. Clone this repository to your local machine:
 
    ```bash
-   git clone https://github.com/your-username/krishiconnect.git
+   git clone https://github.com/ganesh29082002/krishiconnect1.git
    ```
 
 2. Install the required dependencies:
 
    ```bash
+   cd client
+   npm install
+   ```
+3. Install the required dependencies:
+
+   ```bash
+   cd server
    npm install
    ```
 
-3. Configure your environment variables as needed, such as API keys and database connections.
+4. Configure your environment variables as needed, such as API keys and database connections.
 
-4. Start the application:
+5. Start the application:
 
    ```bash
-   npm start
+   - cd client 
+   - npm start
+   ---------------
+   - cd server 
+   - npm start
    ```
 
 5. Open your web browser and navigate to `http://localhost:3000` to access KrishiConnect.
@@ -89,10 +100,7 @@ We welcome contributions from the community to improve KrishiConnect. To contrib
 
 6. Our team will review your pull request, and once approved, your changes will be merged.
 
-## License
 
-KrishiConnect is open-source software licensed under the [MIT License](LICENSE).
 
 ---
 
-Feel free to customize this README file to include specific installation instructions, configuration details, and any other information relevant to your project. Make sure to keep it up to date as your project evolves.
