@@ -1,15 +1,7 @@
 import {React, useState} from 'react';
-import Dropdown from 'react-bootstrap/Dropdown';
-import Navbar from 'react-bootstrap/Navbar';
 import 'bootstrap/dist/css/bootstrap.css';
-// import { MDBCol } from "mdbreact";
-import { MDBCollapse, MDBBtn, MDBCol} from 'mdb-react-ui-kit';
-import Card from 'react-bootstrap/Card';
-// import Button from 'react-bootstrap/Button';
-// import Collapse from 'react-bootstrap/Collapse';
-// import {Container, Col} from 'react-bootstrap';
-// import SearchIcon from '@mui/icons-material/Search';
-// import scheme from '../../Images/Gov_Schemes2.png';
+import { MDBCollapse, MDBCol} from 'mdb-react-ui-kit';
+import {Navbar, Dropdown,Card} from 'react-bootstrap';
 import logo from '../../Assets/Schemes_Logo1.png';
 
 function GovHome() {
@@ -21,7 +13,7 @@ function GovHome() {
    const [showcard5, setShowcard5] = useState(false);
    const [showcard6, setShowcard6] = useState(false);
 
-  // const toggleFirstElement = () => setShowFirstElement(!showFirstElement);
+   
   const togglecard1 = () => setShowcard1(!showcard1);
   const togglecard2 = () => setShowcard2(!showcard2);
   const togglecard3 = () => setShowcard3(!showcard3);
@@ -135,40 +127,6 @@ function GovHome() {
       <img style={{width:"102rem", height:"10rem",padding:"8px" }} src={scheme}/>
      </div> */}
 
-{/* 3rd  Card 1*/}
-{/* <Container fluid= "lg" >
-<Col className="d-flex" xs={12} md={12} >
-  <div class="col-lg-4 mb-6">
-<Card style={{ width: '25rem', display:'flex', boxShadow: "2px 3px 4px 3px #cec7c759" }} className="flex-fill" >
-      <Card.Img variant="top" src="https://img.indiafilings.com/learn/wp-content/uploads/2018/06/12005928/Pradhan-Mantri-Krishi-Sinchai-Yojana.jpg" />
-      <Card.Body>
-        <Card.Title>Pradhan Mantri Krishi Sinchai Yojana (PMKSY)</Card.Title>
-        <Card.Text>
-          The scheme's major goal is to increase the area under irrigation and improve water efficiency through various components and interventions.
-        </Card.Text>
-        
-              <Button
-        onClick={() => setOpen(!open)}
-        aria-controls="example-collapse-text"
-        aria-expanded={open}
-      > Read More
-      </Button>
-      <Collapse in={open}>
-        <div id="example-collapse-text">
-          key objectives of Pradhan Mantri Krishi Sinchai Yojana:
-Har Khet Ko Pani (Water for Every Field): This agriculture scheme aims to provide assured irrigation to every farm field and ensure the optimal use of available water resources.
-        <div>
-          <Card.Link href="#">Link To Apply</Card.Link>
-      <Card.Link href="#">Download</Card.Link>
-        </div>
-        </div>
-      </Collapse>
-      </Card.Body>
-    </Card>
-   </div> 
-
-</Col>
-</Container> */}
 
 {/* """""""""""""""""""""""""""""""""""""""""""""" */}
 <div className="container" style={{marginTop:"2rem"}}>
