@@ -1,10 +1,14 @@
 import React from 'react'
-
+import WeatherIndex from "./featurePages/weatherAPI/WeatherIndex";
+import './css/variable.css';
+import AboutUs from './components/AboutUs';
 export default function App() {
   return (
     <div>
-      <h1>Hiiii Ganuuu</h1>
-      <h2>fdjufbjifgbhj0iew</h2>
+     <WeatherIndex/>
+     <AboutUs/>
     </div>
+    
+
   )
 }
