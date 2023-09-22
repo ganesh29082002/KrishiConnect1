@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import 'bootstrap/dist/css/bootstrap.min.css'; // Import Bootstrap CSS
+ // Import Bootstrap CSS
 import first from '../first.jpg';
 
 function App() {
