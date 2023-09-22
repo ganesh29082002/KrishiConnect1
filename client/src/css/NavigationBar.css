@@ -1,0 +1,43 @@
+.nav-item{
+    padding-right: 20px;
+    color: #1c8c59;
+}
+.nav-item{
+    margin-right: 5px;
+    cursor: pointer;
+}
+
+.navbar-brand{
+   
+    cursor: pointer;
+}
+
+/* src/App.css or your custom CSS file */
+.navLink {
+    text-decoration: none; /* Remove default underline */
+    color: #333; /* Set link color */
+    position: relative; /* Create a stacking context for the ::after pseudo-element */
+    transition: color 0.3s; /* Smooth color transition on hover */
+  }
+  
+  .navLink::after {
+    content: ''; /* Create an empty pseudo-element */
+    position: absolute; /* Position it absolutely within the link */
+    bottom: -2px; /* Push it below the text */
+    left: 0; /* Position it at the start of the link */
+    width: 100%; /* Make it span the entire width of the link */
+    height: 2px; /* Set the height of the underline */
+    background-color: #1b5749; /* Set the underline color */
+    transform: scaleX(0); /* Initially, make the underline invisible */
+    transform-origin: center; /* Center the transform origin */
+    transition: transform 0.3s; /* Smooth scaling effect */
+  }
+  
+  .navLink:hover {
+    color: #007bff; /* Change link color on hover */
+  }
+  
+  .navLink:hover::after {
+    transform: scaleX(1); /* Scale the underline to full width on hover */
+  }
+  
