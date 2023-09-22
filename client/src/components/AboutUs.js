@@ -7,10 +7,10 @@ import farmer2 from '../asset/farmer2.png'
 export default function AboutUs() {
   return (
     <>
-    <div className="container">
-    <div className="weatherContainer  mt-5 mb-5">
+    <div className="container mt-5 " id='about' >
+    <div className="weatherContainer  mt-5 mb-5"  >
           {/* row  */}
-          <div className="row main darkGreenbg d-flex justify-content-center mt-5">
+          <div className="row main darkGreenbg d-flex justify-content-center mt-5"  >
             {/* for left div  */}
             <div className="col-md-4 leftdiv  mt-5 mb-5">
               <div className="content border w-100 bg-white  p-3 m-0  ">

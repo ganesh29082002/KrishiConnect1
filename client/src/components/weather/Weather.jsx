@@ -5,7 +5,8 @@ export default function Weather() {
   return (
     <>
       {/* main Contaiuner  */}
-      <div className="container">
+      <div className="container mt-5" style={{marginTop:"40px"}}>
+        <br />
         <div className="weatherContainer  mt-5 mb-5">
           {/* row  */}
           <div className="row main darkGreenbg d-flex justify-content-center mt-5">
