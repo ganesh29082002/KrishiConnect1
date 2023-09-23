@@ -13,7 +13,7 @@ export default function AboutUs() {
           <div className="row main darkGreenbg d-flex justify-content-center mt-5"  >
             {/* for left div  */}
             <div className="col-md-4 leftdiv  mt-5 mb-5">
-              <div className="content border w-100 bg-white  p-3 m-0  ">
+              <div className="content border  bg-white  p-3 m-0  ">
               
                
                   <img className='w-100' src={farmar1} alt="" />
