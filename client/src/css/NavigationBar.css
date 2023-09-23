@@ -23,7 +23,7 @@
   .navLink::after {
     content: ''; /* Create an empty pseudo-element */
     position: absolute; /* Position it absolutely within the link */
-    bottom: -2px; /* Push it below the text */
+    bottom: -6px; /* Push it below the text */
     left: 0; /* Position it at the start of the link */
     width: 100%; /* Make it span the entire width of the link */
     height: 2px; /* Set the height of the underline */
