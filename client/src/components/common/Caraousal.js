@@ -1,5 +1,7 @@
 import React from 'react'
 import farmer2 from '../../asset/farmer1.png'
+import { Link } from "react-scroll";
+
 export default function Caraousal() {
   return (
    <>
@@ -19,8 +21,9 @@ export default function Caraousal() {
              </span>
              <div className="d-flex p-1 mt-2 ">
              <button className='btn darkGreenbg mx-3' style={{color:"white"}}>Learn More.. </button>
+             <Link className=""  to="services" smooth={true} duration={500}>
              <button className='btn darkGreenbg' style={{color:"white"}}>Go to Services</button>
-
+ </Link>
              </div>
             </div>
             <div className="col-md-6">
