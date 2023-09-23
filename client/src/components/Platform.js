@@ -11,8 +11,8 @@ import logo from '../logo.png';
 function ServiceSection() {
   return (
 
-    <section id="services" className="text-center">
-      <div className="container container1">
+    <section  className="text-center">
+      <div className="container container1" id="services">
         <div className="row">
           <div className="col-12">
             <div className="intro">
@@ -24,11 +24,11 @@ function ServiceSection() {
             </div>
           </div>
         </div>
-        <div className="row g-4">
+        <div className="row g-4" >
           
-          <div className="col-lg-4 col-md-6 mb-3 " style={{height:"300px"}}>
+          <div className="col-lg-4 col-md-6 mb-3  " style={{height:"300px"}}>
           <Link to="/govschemes/home" style={{ textDecoration: 'none' }}> 
-            <div className="service " >
+            <div className="service cardGrid" >
               <img src={schmelogo} alt="abc" />
               <h5>Government Scheme </h5>
               <p className=' lightGreenText'>
@@ -39,49 +39,59 @@ function ServiceSection() {
           </div>
           
           <div className="col-lg-4 col-md-6 mb-3 " style={{height:"300px"}}>
-            <div className="service">
+          <Link to="/weather/home" style={{ textDecoration: 'none' }}> 
+            <div className="service cardGrid">
               <img src={logo} alt="" />
               <h5>Crop Information</h5>
               <p className=' lightGreenText'>
               Crop-specific guidance on cultivation and management.
               </p>
             </div>
+            </Link>
           </div>
           <div className="col-lg-4 col-md-6 mb-3 " style={{height:"300px"}}>
-            <div className="service">
+          <Link to="/govschemes/home" style={{ textDecoration: 'none' }}> 
+            <div className="service cardGrid">
               <img src={product} alt="" />
               <h5>Market Prices</h5>
               <p className=' lightGreenText'>
               Access to local and national agricultural market prices.
               </p>
             </div>
+            </Link>
           </div>
           <div className="col-lg-4 col-md-6 mb-3 " style={{height:"300px"}}>
-            <div className="service">
+          <Link to="/govschemes/home" style={{ textDecoration: 'none' }}> 
+            <div className="service cardGrid">
               <img src={weather} alt="" />
               <h5>Weather Updates</h5>
               <p className=' lightGreenText'>
               Real-time weather forecasts for informed decision-making.
               </p>
-            </div>
+            </div >
+            </Link>
           </div>
           <div className="col-lg-4 col-md-6 mb-3 " style={{height:"300px" }}>
-            <div className="service">
+          <Link to="/govschemes/home" style={{ textDecoration: 'none' }}> 
+            <div className="service cardGrid">
               <img src={menlogo} alt="" />
               <h5>Community Support</h5>
               <p className=' lightGreenText'>
               Community support for farmers to connect, share experiences, and seek expert advice.
               </p>
             </div>
+            </Link>
           </div>
           <div className="col-lg-4 col-md-6 mb-3 " style={{height:"300px"}}>
-            <div className="service">
+          <Link to="/govschemes/home" style={{ textDecoration: 'none' }}> 
+            <div className="service cardGrid " >
               <img src={men} alt="" />
               <h5>Informative articles</h5>
               <p className=' lightGreenText'>
               Informative articles covering a wide range of agricultural topics for knowledge enhancement.
               </p>
             </div>
+            </Link>
           </div>
         </div>
       </div>
