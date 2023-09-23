@@ -1,8 +1,8 @@
 import React from 'react'
-import GovHome from "./featurePages/govSchems/GovHome";
-// import Gov_Articles from "./featurePages/articles/Gov_Articles";import { BrowserRouter, Routes, Route , useLocation } from "react-router-dom";
 
-import NavigationBar from "./components/NavigationBar";
+// import Gov_Articles from "../featurePages/articles/Gov_Articles";
+import { BrowserRouter, Routes, Route , useLocation } from "react-router-dom";
+import GovHome from './featurePages/govSchems/GovHome'
 import HomePage from './pages/HomePage';
 import WeatherIndex from "./featurePages/weatherAPI/WeatherIndex";
 import Footer from "./components/Footer";
@@ -24,11 +24,13 @@ export default function App() {
   return (
     <>
     <BrowserRouter>
-    <NavigationBar />
+    
     <ScrollToTop />
       <Routes>
       <Route path="/" element={<HomePage />} />
-      <Route path="/govschemes/home" element={<WeatherIndex />} />
+      <Route path="/govschemes/home" element={ <GovHome/>} />
+      <Route path="/weather/home" element={<WeatherIndex />} />
+
           
           
         </Routes>
