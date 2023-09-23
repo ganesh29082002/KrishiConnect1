@@ -84,9 +84,9 @@
     color: rgb(57, 57, 58);
 }
 .card{
-    background: linear-gradient(to right, #ffffff 50%, rgba(203, 240, 200, 0.507));
-    box-shadow: 5px 8px 10px #c3f2c533;
-    border-radius: 10px;
+    /* background: linear-gradient(to right, #ffffff 50%, rgba(203, 240, 200, 0.507)); */
+    /* box-shadow: 5px 8px 10px #c3f2c533; */
+    border-radius: 8px;
 
 }
 
