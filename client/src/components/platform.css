@@ -463,3 +463,8 @@ input.form-control {
     box-shadow: none;
     border-color: var(--brand);
 }
+
+
+.cardGrid:hover{
+    box-shadow: 5px 5px 10px 0px rgba(128, 126, 126, 0.48);
+}
