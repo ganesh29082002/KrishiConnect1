@@ -79,7 +79,7 @@ export default function Weather() {
             Get Crop Suggestion Here
           </h2>
           {/* filter bar  */}
-          <div className="w-100 darkGreenbg mt-3 p-2 d-flex justify-content-between ">
+          <div className="w-100 darkGreenbg mt-3 p-2 d-flex justify-content-around ">
             <div class="dropdown-container">
               <select class="custom-select  px-1">
                 <option value="option1  px-1">Option 1</option>
@@ -143,6 +143,9 @@ export default function Weather() {
           </div>
         </div>
       </div>
+      <br />
+      <br />
+      
     </>
   );
 }
