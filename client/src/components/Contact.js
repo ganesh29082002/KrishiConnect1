@@ -2,24 +2,26 @@ import React from 'react';
 
 const Contact = () => {
   return (
-    <section className="contact my-4">
-      <div className="container">
-        <h2 className="text-center mb-4">Contact Us</h2>
-        <div className="row">
-          <div className="col-md-6">
+    <section className="contact my-4" id='contact'>
+      <div className="container lightGreenbg">
+      <h2 className="text-center mb-3 p-3 darkGreenText">Contact Us</h2>
+
+        <div className="row  p-3">
+
+          <div className="col-md-6 d-flex justify-content-center align-items-center">
             <div className="contact-info">
-              <h3>Contact Information</h3>
+              <h3 className='darkGreenText'>Contact Information</h3>
               <ul className="list-unstyled">
                 <li className="mb-3 contact-item">
-                  <i className="fas fa-envelope contact-icon"></i>
-                  <a href="mailto:contact@farmers-things.com" className="contact-link">contact@farmers-things.com</a>
+                  <i className="fas fa-envelope contact-icon px-2"></i>
+                  <a href="mailto:contact@farmers-things.com" className="contact-link mediumGreenText">contact@farmers-things.com</a>
                 </li>
-                <li className="mb-3 contact-item">
-                  <i className="fas fa-phone contact-icon"></i>
+                <li className="mb-3 contact-item mediumGreenText">
+                  <i className="fas fa-phone contact-icon px-2"></i>
                   (123) 456-7890
                 </li>
-                <li className="contact-item">
-                  <i className="fas fa-map-marker-alt contact-icon"></i>
+                <li className="contact-item mediumGreenText">
+                  <i className="fas fa-map-marker-alt contact-icon px-2"></i>
                   123 Farm Road, Ruralville
                 </li>
               </ul>
@@ -32,21 +34,21 @@ const Contact = () => {
           </div>
           <div className="col-md-6">
             <div className="contact-form">
-              <h3>Send us a message</h3>
+             
               <form>
                 <div className="mb-3">
-                  <label htmlFor="name" className="form-label">Name</label>
+                  <label htmlFor="name" className="form-label mediumGreenText" style={{}}>Name</label>
                   <input type="text" className="form-control" id="name" placeholder="Your Name" />
                 </div>
                 <div className="mb-3">
-                  <label htmlFor="email" className="form-label">Email</label>
+                  <label htmlFor="email" className="form-label mediumGreenText">Email</label>
                   <input type="email" className="form-control" id="email" placeholder="Your Email" />
                 </div>
                 <div className="mb-3">
-                  <label htmlFor="message" className="form-label">Message</label>
+                  <label htmlFor="message" className="form-label mediumGreenText">Message</label>
                   <textarea className="form-control" id="message" rows="5" placeholder="Your Message"></textarea>
                 </div>
-                <button type="submit" className="btn btn-primary">Send Message</button>
+                <button type="submit" className="btn darkGreenbg" style={{color:"white"}}>Send Message</button>
               </form>
             </div>
           </div>

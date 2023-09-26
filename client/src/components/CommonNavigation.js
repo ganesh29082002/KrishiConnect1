@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-scroll";
+
 import { Link as RouterLink } from "react-router-dom";
 import '../css/NavigationBar.css'
 const NavigationBar = () => {
@@ -25,24 +25,24 @@ const NavigationBar = () => {
         <div className="collapse navbar-collapse justify-content-center" id="navbarNav">
           <ul className="navbar-nav">
             <li className="nav-item">
-            <Link className="navLink"  to="carouselExampleIndicators" smooth={true} duration={500}>
+            <RouterLink className="navLink"  to="/" >
             Home
-          </Link>
+          </RouterLink>
             </li>
             <li className="nav-item">
-            <Link className="navLink"  to="services" smooth={true} duration={500}>
+            <RouterLink className="navLink"  to="/" smooth={true} duration={500}>
             Services
-          </Link>
+          </RouterLink>
             </li>
             <li className="nav-item">
-            <Link className="navLink" to="about" smooth={true} duration={500}>
+            <RouterLink className="navLink" to="/" smooth={true} duration={500}>
             About
-          </Link>
+          </RouterLink>
             </li>
             <li className="nav-item">
-            <Link className="navLink" to="contact" smooth={true} duration={500}>
+            <RouterLink className="navLink" to="/" smooth={true} duration={500}>
             Contact Us
-          </Link>
+          </RouterLink>
             </li>
           </ul>
         </div>
