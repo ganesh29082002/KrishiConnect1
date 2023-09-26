@@ -14,6 +14,9 @@ export default function GovHome() {
           Government Scheme Information
         </h2>
         {/* filter bar  */}
+       
+        {/* table for crop suggetion  */}
+        <div class="accordion container" id="accordionExample">
         <div className=" filtar-bar w-100 darkGreenbg mt-3  d-flex justify-content-center ">
           <div class="dropdown-container">
             <select class="custom-select  px-1">
@@ -104,14 +107,12 @@ export default function GovHome() {
             />
           </div>
         </div>
-        {/* table for crop suggetion  */}
-        <div class="accordion container" id="accordionExample">
           {/* Scheme 1 */}
           <div className="card p-1 pb-0">
             <div class="card-header bg-white " id="headingOne ">
               <h6 class="mb-0 collapsebtn p-0">
                 <button
-                  class="bg-white btn-block text-left collapsed p-1 collapsebtn"
+                  class="bg-white btn-block text-left collapsed p-1 collapsebtn mediumGreenText"
                   type="button"
                   data-toggle="collapse"
                   data-target="#collapseOne"
@@ -144,7 +145,7 @@ export default function GovHome() {
             <div class="card-header bg-white " id="headingOne ">
               <h6 class="mb-0 ">
                 <button
-                  class="bg-white btn-block text-left collapsed p-1 collapsebtn"
+                  class="bg-white btn-block text-left collapsed p-1 collapsebtn mediumGreenText"
                   type="button"
                   data-toggle="collapse"
                   data-target="#collapseTwo"
@@ -175,7 +176,7 @@ export default function GovHome() {
             <div class="card-header bg-white " id="headingOne ">
               <h6 class="mb-0 p-0">
                 <button
-                  class="bg-white btn-block text-left collapsed p-1 collapsebtn"
+                  class="bg-white btn-block text-left collapsed p-1 collapsebtn mediumGreenText"
                   type="button"
                   data-toggle="collapse"
                   data-target="#collapseThree"
@@ -202,6 +203,12 @@ export default function GovHome() {
         </div>
       </div>
       <br />
+      <br />
+      <br />
+      <br /><br />
+      <br /><br />
+      <br /><br />
+      <br /><br />
       <br />
     </>
   );
