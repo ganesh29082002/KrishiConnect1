@@ -50,7 +50,7 @@ function ServiceSection() {
             </Link>
           </div>
           <div className="col-lg-4 col-md-6 mb-3 " style={{height:"300px"}}>
-          <Link to="/govschemes/home" style={{ textDecoration: 'none' }}> 
+          <Link to="/apmc/home" style={{ textDecoration: 'none' }}> 
             <div className="service cardGrid">
               <img src={product} alt="" />
               <h5>Market Prices</h5>
@@ -61,7 +61,7 @@ function ServiceSection() {
             </Link>
           </div>
           <div className="col-lg-4 col-md-6 mb-3 " style={{height:"300px"}}>
-          <Link to="/govschemes/home" style={{ textDecoration: 'none' }}> 
+          <Link to="/weather/home" style={{ textDecoration: 'none' }}> 
             <div className="service cardGrid">
               <img src={weather} alt="" />
               <h5>Weather Updates</h5>
