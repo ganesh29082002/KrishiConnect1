@@ -118,3 +118,16 @@ td{
   font-weight: bold;
   color: #5e8d7f;
 }
+
+.circular-button {
+  width: 40px; /* Set the width and height to the same value to make it circular */
+  height: 40px;
+  border-radius: 40%; /* Use border-radius to create a circular shape */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* background-color: transparent; If you want a transparent background */
+  border: none; /* If you want to remove the button border */
+  cursor: pointer; /* Add a pointer cursor to indicate interactivity */
+  outline: none; /* Remove the default button focus outline */
+}

@@ -8,6 +8,7 @@ import WeatherIndex from "./featurePages/weatherAPI/WeatherIndex";
 import Footer from "./components/Footer";
 
 import './css/variable.css';
+import ApmcHomePage from './featurePages/apmc/ApmcHomePage';
 
 function ScrollToTop() {
   const { pathname } = useLocation();
@@ -30,6 +31,8 @@ export default function App() {
       <Route path="/" element={<HomePage />} />
       <Route path="/govschemes/home" element={ <GovHome/>} />
       <Route path="/weather/home" element={<WeatherIndex />} />
+      <Route path="/apmc/home" element={<ApmcHomePage/>} />
+
 
           
           
@@ -38,7 +41,7 @@ export default function App() {
        </BrowserRouter>
        
     <div>
-     {/* <WeatherIndex/> */}
+     
     
     </div>
     

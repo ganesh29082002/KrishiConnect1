@@ -21,7 +21,7 @@ export default function Weather() {
                     placeholder="search location"
                     className="border serachInput "
                   />
-                  <button className="btn btn-success rounded-circle ">
+                  <button className="btn btn-success circular-button" >
                     <i className="fas fa-search"></i>
                   </button>
                 </div>
@@ -45,23 +45,24 @@ export default function Weather() {
               <div className="row">
                 <div className="col-md-6">
                   <div class="card p-1">
-                    <div class="card-body">This is</div>
+                    <div class="card-body"><h6>Temp Min</h6></div>
                   </div>
                 </div>
 
                 <div className="col-md-6">
                   <div class="card p-1">
-                    <div class="card-body">This is</div>
+                    <div class="card-body"><h6>Temp Max </h6> 
+</div>
                   </div>
                 </div>
                 <div className="col-md-6">
                   <div class="card p-1">
-                    <div class="card-body">This is</div>
+                    <div class="card-body"><h6>Humidity</h6></div>
                   </div>
                 </div>
                 <div className="col-md-6">
                   <div class="card p-1">
-                    <div class="card-body">This is</div>
+                    <div class="card-body"><h6>Day Type </h6> </div>
                   </div>
                 </div>
               </div>
