@@ -1,5 +1,7 @@
 import React from 'react'
 import farmer2 from '../../asset/farmer1.png'
+import farmer3 from '../../asset/farmer5.png'
+import farmer1 from '../../asset/farmer0.png'
 import { Link } from "react-scroll";
 
 export default function Caraousal() {
@@ -16,8 +18,8 @@ export default function Caraousal() {
         <div className="row">
             <div className="col-md-6 p-5 text-center leftContainer d-flex flex-column align-items-center justify-content-center " style={{height:"500px"}}>
              <h4 className='p-2 darkGreenText'> "Nurturing India's Growth, One Crop at a Time." </h4>
-             <span className='p-2 '> loream8
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut natus illum aliquid eveniet atque voluptates unde enim ullam quae sint voluptatem, ad ipsum !
+             <span className='p-2 '> 
+             "The ultimate goal of farming is not the growing of crops, but the cultivation and perfection of human beings."
              </span>
              <div className="d-flex p-1 mt-2 ">
              <button className='btn darkGreenbg mx-3' style={{color:"white"}}>Learn More.. </button>
@@ -32,10 +34,44 @@ export default function Caraousal() {
         </div>
     </div>
     <div class="carousel-item">
-      <img class="d-block w-100" src="..." alt="Second slide" />
+    <div className="row">
+            <div className="col-md-6 p-5 text-center leftContainer d-flex flex-column align-items-center justify-content-center " style={{height:"500px"}}>
+             <h4 className='p-2 darkGreenText'> "Farming is a profession of hope." </h4>
+             <span className='p-2 '> 
+             "Agriculture is the most healthful, most useful, and most noble employment of man."
+             </span>
+             <div className="d-flex p-1 mt-2 ">
+             <button className='btn darkGreenbg mx-3' style={{color:"white"}}>Learn More.. </button>
+             <Link className=""  to="services" smooth={true} duration={500}>
+             <button className='btn darkGreenbg' style={{color:"white"}}>Go to Services</button>
+ </Link>
+             </div>
+            </div>
+            <div className="col-md-6">
+            <img class="d-block w-10" src={farmer3} alt="Second slide" />
+            </div>
+        </div>
+      {/* <img class="d-block w-100" src="..." alt="Second slide" /> */}
     </div>
     <div class="carousel-item">
-      <img class="d-block w-100" src="..." alt="Third slide" />
+    <div className="row">
+            <div className="col-md-6 p-5 text-center leftContainer d-flex flex-column align-items-center justify-content-center " style={{height:"500px"}}>
+             <h4 className='p-2 darkGreenText'> "The glory of farming is that it has the power to take the ordinary and turn it into something extraordinary." </h4>
+             <span className='p-2 '> 
+             "Agriculture is the most healthful, most useful, and most noble employment of man."
+             </span>
+             <div className="d-flex p-1 mt-2 ">
+             <button className='btn darkGreenbg mx-3' style={{color:"white"}}>Learn More.. </button>
+             <Link className=""  to="services" smooth={true} duration={500}>
+             <button className='btn darkGreenbg' style={{color:"white"}}>Go to Services</button>
+ </Link>
+             </div>
+            </div>
+            <div className="col-md-6">
+            <img class="d-block w-10" src={farmer1} alt="Third slide" />
+            </div>
+        </div>
+      {/* <img class="d-block w-100" src="..." alt="Third slide" /> */}
     </div>
   </div>
   <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
