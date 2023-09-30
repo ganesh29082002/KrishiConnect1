@@ -9,7 +9,7 @@ const NavigationBar = () => {
       <div className="container">
        
         <RouterLink to="/" className="navbar-brand navLink" style={{color:"#1b5749"}} smooth={true} duration={500}>
-        CodeXLogo
+        <span style={{color:"Green"}}>Krishi</span>Connect.
           </RouterLink>
         <button
           className="navbar-toggler"
