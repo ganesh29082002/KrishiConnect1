@@ -32,10 +32,6 @@ export default function App() {
       <Route path="/govschemes/home" element={ <GovHome/>} />
       <Route path="/weather/home" element={<WeatherIndex />} />
       <Route path="/apmc/home" element={<ApmcHomePage/>} />
-
-
-          
-          
         </Routes>
         <Footer/>
        </BrowserRouter>
