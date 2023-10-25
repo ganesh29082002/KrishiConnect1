@@ -47,8 +47,8 @@ export default function Caraousal() {
  </Link>
              </div>
             </div>
-            <div className="col-md-6">
-            <img class="d-block w-10" src={farmer3} alt="Second slide" />
+            <div className="col-md-6 mt-5">
+            <img class="d-block mt-4" src={farmer3} alt="Second slide" />
             </div>
         </div>
       {/* <img class="d-block w-100" src="..." alt="Second slide" /> */}
@@ -67,8 +67,8 @@ export default function Caraousal() {
  </Link>
              </div>
             </div>
-            <div className="col-md-6">
-            <img class="d-block w-10" src={farmer1} alt="Third slide" />
+            <div className="col-md-6 mt-4">
+            <img class="d-block mt-4" src={farmer1} alt="Third slide" />
             </div>
         </div>
       {/* <img class="d-block w-100" src="..." alt="Third slide" /> */}
