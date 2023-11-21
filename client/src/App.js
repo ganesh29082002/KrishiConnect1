@@ -3,6 +3,7 @@ import React from 'react'
 // import Gov_Articles from "../featurePages/articles/Gov_Articles";
 import { BrowserRouter, Routes, Route , useLocation } from "react-router-dom";
 import GovHome from './featurePages/govSchems/GovHome'
+import AddSchemes from './featurePages/govSchems/AddSchemes'
 import HomePage from './pages/HomePage';
 import WeatherIndex from "./featurePages/weatherAPI/WeatherIndex";
 import Footer from "./components/Footer";
@@ -33,6 +34,7 @@ export default function App() {
       <Routes>
       <Route path="/" element={<HomePage />} />
       <Route path="/govschemes/home" element={ <GovHome/>} />
+      <Route path="/govschemes/addSchemes" element={ <AddSchemes/>} />
       <Route path="/weather/home" element={<WeatherIndex />} />
       <Route path="/apmc/home" element={<ApmcHomePage/>} />
       <Route path="/articals/home" element={<AriticalHome/>} />

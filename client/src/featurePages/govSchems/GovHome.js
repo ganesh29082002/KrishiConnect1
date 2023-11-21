@@ -2,10 +2,33 @@
 
 import React from "react";
 import "../../css/GovHome.css";
+import axios from 'axios'
 import NavigationBar from "../../components/CommonNavigation";
-
+import { useState , useEffect } from "react";
+import {useNavigate } from "react-router-dom";
 export default function GovHome() {
- 
+    const navigate = useNavigate();
+  // State to store form data
+
+  const [user, setUser] = useState({
+    fullname: "",
+    email: "",
+    password: "",
+    role: "",
+    phoneno: "",
+    city: "",
+  });
+const [schemeData , setSchemedata ] = useState([]);
+
+  const getgovschemes = async ()=>{
+      const res =  await axios.get("http://localhost:8800/api/getgovschemes")
+      console.log(res.data);
+      setSchemedata(res.data);
+  }
+
+  useEffect(() =>{
+  getgovschemes()
+  },[]);
   return (
     <>
     <NavigationBar/>
@@ -13,6 +36,16 @@ export default function GovHome() {
         <h2 className="mt-3 p-3 darkGreenText font-weight-bolder">
           Government Scheme Information
         </h2>
+                 <button
+                  // onClick={(e) => onRegister(e)}
+                  onClick={() => navigate('/govschemes/addSchemes')}
+                  className="btn darkGreenbg SHADOW-NONE w-20"
+                  data-dismiss="modal"
+                >
+                  Add Schemes
+                </button>
+     
+
         {/* filter bar  */}
        
         {/* table for crop suggetion  */}
@@ -107,7 +140,11 @@ export default function GovHome() {
             />
           </div>
         </div>
+
           {/* Scheme 1 */}
+          { schemeData.map((items)=>(
+
+         
           <div className="card p-1 pb-0">
             <div class="card-header bg-white " id="headingOne ">
               <h6 class="mb-0 collapsebtn p-0">
@@ -119,7 +156,7 @@ export default function GovHome() {
                   aria-expanded="false"
                   aria-controls="collapseOne"
                 >
-                  Gramin Bhandaran Yojana
+                 { items.name}
                 </button>
            
               </h6>
@@ -132,16 +169,16 @@ export default function GovHome() {
               data-parent="#accordionExample"
             >
               <div class="card-body">
-                This major scheme for farmers in India addressed the huge
-                shortage of storage facilities in rural areas because of which
-                Indian farmers had to face huge post-harvest losses and distress
-                selling of agricultural produce.
+                 { items.details}
+              
               </div>
             </div>
             </div>
+          ))
+}
 
           {/* Scheme 2 */}
-          <div className="card p-1 pb-0">
+          {/* <div className="card p-1 pb-0">
             <div class="card-header bg-white " id="headingOne ">
               <h6 class="mb-0 ">
                 <button
@@ -169,10 +206,10 @@ export default function GovHome() {
                 support to small and marginal farmers in India.
               </div>
             </div>
-          </div>
+          </div> */}
 
           {/* Scheme 3 */}
-          <div className="card p-0 pb-0">
+          {/* <div className="card p-0 pb-0">
             <div class="card-header bg-white " id="headingOne ">
               <h6 class="mb-0 p-0">
                 <button
@@ -199,7 +236,7 @@ export default function GovHome() {
                 pesticides, machinery, and other inputs.
               </div>
             </div>
-          </div>
+          </div> */}
         </div>
       </div>
       <br />
