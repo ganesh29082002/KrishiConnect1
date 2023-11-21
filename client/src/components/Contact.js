@@ -1,6 +1,34 @@
-import React from 'react';
-
+import axios from 'axios';
+import React , {useState} from 'react';
+import {ContactData} from '../api/utilityAPI'
 const Contact = () => {
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    message: '',
+  });
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    console.log(name , value)
+    setFormData({ ...formData, [name]: value });
+  };
+
+  const handleSubmit = async(e) => {
+    e.preventDefault();
+
+    const res = await ContactData(formData);
+    console.log(res.data.data)
+    alert(res.data.message)
+    setFormData({
+      name: "",
+      email:"",
+      message:""
+    })
+    // Here, you can send the formData to the backend.
+    // You can use Axios or the Fetch API to make a POST request to your backend API.
+  };
+
   return (
     <section className="contact my-4" id='contact'>
       <div className="container lightGreenbg">
@@ -35,21 +63,53 @@ const Contact = () => {
           <div className="col-md-6">
             <div className="contact-form">
              
-              <form>
-                <div className="mb-3">
-                  <label htmlFor="name" className="form-label mediumGreenText" style={{}}>Name</label>
-                  <input type="text" className="form-control" id="name" placeholder="Your Name" />
-                </div>
-                <div className="mb-3">
-                  <label htmlFor="email" className="form-label mediumGreenText">Email</label>
-                  <input type="email" className="form-control" id="email" placeholder="Your Email" />
-                </div>
-                <div className="mb-3">
-                  <label htmlFor="message" className="form-label mediumGreenText">Message</label>
-                  <textarea className="form-control" id="message" rows="5" placeholder="Your Message"></textarea>
-                </div>
-                <button type="submit" className="btn darkGreenbg" style={{color:"white"}}>Send Message</button>
-              </form>
+            <form onSubmit={handleSubmit}>
+      <div className="mb-3">
+        <label htmlFor="name" className="form-label mediumGreenText">
+          Name
+        </label>
+        <input
+          type="text"
+          className="form-control"
+          id="name"
+          name="name"
+          placeholder="Your Name"
+          value={formData.name}
+          onChange={handleChange}
+        />
+      </div>
+      <div className="mb-3">
+        <label htmlFor="email" className="form-label mediumGreenText">
+          Email
+        </label>
+        <input
+          type="email"
+          className="form-control"
+          id="email"
+          name="email"
+          placeholder="Your Email"
+          value={formData.email}
+          onChange={handleChange}
+        />
+      </div>
+      <div className="mb-3">
+        <label htmlFor="message" className="form-label mediumGreenText">
+          Message
+        </label>
+        <textarea
+          className="form-control"
+          id="message"
+          name="message"
+          rows="5"
+          placeholder="Your Message"
+          value={formData.message}
+          onChange={handleChange}
+        />
+      </div>
+      <button type="submit" className="btn darkGreenbg" style={{ color: "white" }}>
+        Send Message
+      </button>
+    </form>
             </div>
           </div>
         </div>
