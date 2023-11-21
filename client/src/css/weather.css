@@ -56,19 +56,19 @@
 
   /* card css  */
 
-  .card{
+  /* .card{
     padding: 1.2rem 3rem 1rem 3rem;
     margin: 1rem;
     border-radius: 1.5rem;
     border-color: rgba(238, 237, 237, 0.438);
     box-shadow: 5px 8px 10px #80808033;
-}
-@media(max-width:767px){
+} */
+/* @media(max-width:767px){
     .card{
         height: 5rem;
         padding: 1.5rem 1.5rem 1rem 1.5rem;
     }
-}
+} */
 .carousel-indicators li {
     width: 5px;
     height: 6px;
@@ -83,12 +83,12 @@
     font-size: 5rem;
     color: rgb(57, 57, 58);
 }
-.card{
+/* .card{ */
     /* background: linear-gradient(to right, #ffffff 50%, rgba(203, 240, 200, 0.507)); */
     /* box-shadow: 5px 8px 10px #c3f2c533; */
-    border-radius: 8px;
+    /* border-radius: 8px;
 
-}
+} */
 
 
 /* dropdown css  */

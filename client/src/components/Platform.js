@@ -53,7 +53,7 @@ function ServiceSection() {
           <Link to="/apmc/home" style={{ textDecoration: 'none' }}> 
             <div className="service cardGrid">
               <img src={product} alt="" />
-              <h5>Market Prices</h5>
+              <h5>APMC Market </h5>
               <p className=' lightGreenText'>
               Access to local and national agricultural market prices.
               </p>
@@ -72,7 +72,7 @@ function ServiceSection() {
             </Link>
           </div>
           <div className="col-lg-4 col-md-6 mb-3 " style={{height:"300px" }}>
-          <Link to="/govschemes/home" style={{ textDecoration: 'none' }}> 
+          <Link to="/community/home" style={{ textDecoration: 'none' }}> 
             <div className="service cardGrid">
               <img src={menlogo} alt="" />
               <h5>Community Support</h5>
@@ -83,7 +83,7 @@ function ServiceSection() {
             </Link>
           </div>
           <div className="col-lg-4 col-md-6 mb-3 " style={{height:"300px"}}>
-          <Link to="/govschemes/home" style={{ textDecoration: 'none' }}> 
+          <Link to="/articals/home" style={{ textDecoration: 'none' }}> 
             <div className="service cardGrid " >
               <img src={men} alt="" />
               <h5>Informative articles</h5>

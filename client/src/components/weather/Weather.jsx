@@ -1,45 +1,50 @@
-
-import React,{useState} from 'react';
-import axios from 'axios'
+import React, { useState } from "react";
+import axios from "axios";
 import "../../css/weather.css";
 import cloud from "../../asset/cloud.png";
 export default function Weather() {
+  const [city, setCity] = useState("");
+  const [Temp, setTemp] = useState(false);
 
-  const[city,setCity] = useState("")
-  const[data,setData]=useState({
-    description:"",
-    temp:0, 
+  const [data, setData] = useState({
+    description: "",
+    temp: 0,
     temp_max: 0,
     temp_min: 0,
     humidity: 0,
-    country: 'IN', sunrise: 0, sunset: 0,
-    wind :0,
+    country: "IN",
+    sunrise: 0,
+    sunset: 0,
+    wind: 0,
+  });
 
-  })
- 
-  const handleclick =()=>{
-    axios.get(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=8fc7db9ef3e1a9c9d04ade2367f1651e`)
-    .then((response)=>{
-      console.log(response.data)
-      setData({
-        description:response.data.weather[0].description,
-    temp:response.data.main.temp, 
-    temp_max: response.data.main.temp_max,
-    temp_min: response.data.main.temp_min,
-    humidity: response.data.main.humidity,
-    country: response.data.sys.country, 
-    sunrise:response.data.sys.sunrise,
-     sunset:response.data.sys.sunset,
-     wind : response.data.wind.speed,
-      })
-    })
-    
-  }
+  const handleclick = () => {
+    axios
+      .get(
+        `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=8fc7db9ef3e1a9c9d04ade2367f1651e`
+      )
+      .then((response) => {
+        console.log(response.data.list);
+        setData({
+          description: response.data.weather[0].description,
+          temp: response.data.main.temp,
+          temp_max: response.data.main.temp_max,
+          temp_min: response.data.main.temp_min,
+          humidity: response.data.main.humidity,
+          country: response.data.sys.country,
+          sunrise: response.data.sys.sunrise,
+          sunset: response.data.sys.sunset,
+          wind: response.data.wind.speed,
+        });
+
+        setTemp(true);
+      });
+  };
 
   return (
     <>
       {/* main Contaiuner  */}
-      <div className="container mt-5" style={{marginTop:"40px"}}>
+      <div className="container mt-5" style={{ marginTop: "40px" }}>
         <br />
         <div className="weatherContainer  mt-5 mb-5">
           {/* row  */}
@@ -54,11 +59,15 @@ export default function Weather() {
                     id=""
                     placeholder="search location"
                     className="border serachInput "
-                    value={city} onChange={(e)=>{
-                      setCity(e.target.value)
+                    value={city}
+                    onChange={(e) => {
+                      setCity(e.target.value);
                     }}
                   />
-                  <button className="btn btn-success circular-button" onClick={handleclick} >
+                  <button
+                    className="btn btn-success circular-button"
+                    onClick={handleclick}
+                  >
                     <i className="fas fa-search"></i>
                   </button>
                 </div>
@@ -66,17 +75,20 @@ export default function Weather() {
                   <img src={cloud} alt="" /> br
                 </div>
                 <div className="d-flex justify-content-center">
-
-                <span className='text-success '> {data.description}</span>
+                  <span className="text-success ">
+                    {" "}
+                    {Temp ? data.description : null}
+                  </span>
                 </div>
 
                 <div className="p-2">
                   <div className="temp d-flex justify-content-center p-1 ">
-                    
-                    <h3 className="font-weight-bold darkGreenText">{(data.temp - 273.15).toFixed(2)}°C</h3>
+                    <h3 className="font-weight-bold darkGreenText">
+                      {Temp ? (data.temp - 273.15).toFixed(2) : null}°C
+                    </h3>
                   </div>
                   <div className="temp d-flex justify-content-center  ">
-                    <h4 className="lightGreenText">{city}</h4>
+                    <h4 className="lightGreenText">{city.toUpperCase()}</h4>
                   </div>
                 </div>
               </div>
@@ -85,40 +97,44 @@ export default function Weather() {
             {/* for right div  */}
 
             <div className="col-md-6 shadow-sm  mb-5 bg-white rounded  mt-5 mb-5">
-              <div className="row">
-                <div className="col-md-6">
-                  <div class="card p-1">
-                    <div class="card-body"><h6>Temp Min</h6> <span className='text-success'>{(data.temp_min- 273.15).toFixed(2)} °C</span></div>
+              <div className="row justify-content-center mt-2 mb-2">
+                <div className="col-md-5 m-1">
+                  <div class="card p-1 shadow-sm ">
+                    <div class="card-body">
+                      <h6>Temp Min</h6>{" "}
+                      <span className="text-success">
+                        {Temp ? (data.temp_min - 273.15).toFixed(2) : null} °C
+                      </span>
+                    </div>
                   </div>
                 </div>
 
-                <div className="col-md-6">
-                  <div class="card p-1">
-                    <div class="card-body"><h6>Temp Max </h6> 
-                    <span className='text-success'>{(data.temp_max - 273.15).toFixed(2)} °C</span>
-</div>
-                  </div>
-                </div>
-               
-                {/* <div className="col-md-6">
-                  <div class="card p-1">
-                    <div class="card-body"><h6>Humidity</h6></div>
-                    <span className='text-success ml-2'>{data.humidity}</span>
-                  </div>
-                </div> */}
-  <div className="col-md-6">
-                  <div class="card p-1">
-                    <div class="card-body"><h6>Humidity </h6> 
-                    <span className='text-success'>{data.humidity}</span>
-</div>
+                <div className="col-md-5 m-1">
+                  <div class="card p-1 shadow-sm">
+                    <div class="card-body ">
+                      <h6>Temp Max </h6>
+                      <span className="text-success">
+                        {Temp ? (data.temp_max - 273.15).toFixed(2) : null} °C
+                      </span>
+                    </div>
                   </div>
                 </div>
 
-                <div className="col-md-6">
-                  <div class="card p-1">
-                    <div class="card-body"><h6>Wind Speed</h6> 
-                    <span className='text-success'>{data.wind}</span>
-</div>
+                <div className="col-md-5 m-1">
+                  <div class="card p- shadow-sm1">
+                    <div class="card-body">
+                      <h6>Humidity </h6>
+                      <span className="text-success">{data.humidity} %</span>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="col-md-5 m-1">
+                  <div class="card p-1 shadow-sm">
+                    <div class="card-body">
+                      <h6>Wind Speed </h6>
+                      <span className="text-success">{data.wind} Km/h</span>
+                    </div>
                   </div>
                 </div>
                 {/* <div className="col-md-6">
@@ -128,9 +144,13 @@ export default function Weather() {
                   </div>
                 </div> */}
               </div>
-              <div className="row">
-                <div class="card  p-1 w-100">
-                  <div class="card-body">this is</div>
+              <div className="row justify-content-center my-2">
+                <div className="col-md-10">
+                  <div class="card  p-1 shadow-sm">
+                    <div class="card-body text-success text-center">
+                      this is for next 10 days tempreture
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
@@ -208,7 +228,6 @@ export default function Weather() {
       </div>
       <br />
       <br />
-      
     </>
   );
 }

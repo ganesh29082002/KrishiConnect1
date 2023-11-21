@@ -1,5 +1,7 @@
-// const auth = require("../middelware/Authentication");
-const { register,login,forgotpassword,resetpassword,wlcom, noRouteFound,sendOtp,verifyOtp, addgovschemes,getgovschemes} = require("../controllers/Authentication");
+
+const auth = require("../middelware/Authentication");
+// const upload = require("../middelware/FileUploads")
+const { register,login,forgotpassword,resetpassword,wlcom, noRouteFound,sendOtp,verifyOtp,getContextData, uploadFile} = require("../controllers/Authentication");
 
 const router = require("express").Router();
 router.post("/register",register);
@@ -11,7 +13,12 @@ router.post("/verifyOtp",verifyOtp);
 router.post("/login",login);
 // router.post("/forgotpassword",forgotpassword);
 // router.post("/resetpassword/:token",resetpassword);
-// router.get("/",auth,wlcom);
+router.get("/",auth,wlcom);
+router.get("/getContextData/:id",getContextData);
+
+// router.post("/upload", upload.single('file') ,uploadFile);
+
+
 router.post("*",noRouteFound);
 
 
