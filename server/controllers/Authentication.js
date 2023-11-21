@@ -202,7 +202,7 @@ const login = async (req, res, next) => {
 
       // save user token
       user.token = token;
-      // await user.save();
+      await user.save();
     // user
       return res.status(200).json(user);
     } else {
@@ -299,6 +299,17 @@ const resetpassword = async(req, res, next) => {
   }
 };
 
+const getContextData = async(req,res)=>{
+  try {
+    const user = await User.findById(req.params.id);
+    console.log("context value");
+    res.json(user);
+    // console.log(res.json(product))
+  } catch (error) {
+    res.json({ message: error });
+  }
+}
+
 const wlcom = async (req, res, next) => {
   try {
     const data = await User.findById(req.user.user_id);
@@ -322,6 +333,16 @@ const noRouteFound = (req, res) => {
     },
   });
 };
+
+const uploadFile = (req, res) => {
+   if (req.file) {
+    res.json({ message: 'File uploaded successfully' });
+  } else {
+    res.status(400).json({ message: 'No file uploaded' });
+  }
+
+};
+
 module.exports = {
   register,
   sendOtp,
@@ -331,4 +352,6 @@ module.exports = {
   wlcom,
   noRouteFound,
   verifyOtp,
+  getContextData,
+  uploadFile
 };
