@@ -15,7 +15,7 @@ const [formData, setFormData] = useState({
   fullname: "",
   email: "",
   password: "",
-  role:"",
+  role: null ,
   phoneno:"",
   city : "",
 
@@ -122,7 +122,7 @@ const [loading, setLoading] = useState(false);
       console.log("data in navbar");
       RessetData(response.data);
       
-      setUserContext(response.data);
+      await setUserContext(response.data);
       //  set loading false
       setLoading(false);
       // set authentication complete
@@ -398,9 +398,10 @@ const [loading, setLoading] = useState(false);
               <option value="none" >
                Type
               </option>
-              <option value="fbs">Farmer/Buyer/Seller</option>
-              <option value="expert">Agriculture Expert</option>
-              <option value="admin">Admin</option>
+              <option value="1">Farmer/Buyer</option>
+              <option value="1">Seller</option>
+              <option value="2">Agriculture Expert</option>
+              <option value="3">Admin</option>
 
             </select>
           </div>
