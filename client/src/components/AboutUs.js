@@ -27,7 +27,7 @@ export default function AboutUs() {
             <div className="col-md-6 shadow-sm mb-5 bg-white rounded  mt-5 mb-5 ">
                 <div className="info m-2 mr-4">
               <h3 className='p-2 darkGreenText'>Who We Are</h3>
-             <p className=' p-2 text-justify  mediumGreenText'> Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque illo aperiam soluta maxime voluptas dolorum ullam repellendus tenetur, assumenda quae harum ex beatae necessitatibus quaerat et? Cumque possimus labore totam?</p>
+             <p className=' p-2 text-justify  mediumGreenText'> We are a passionate team focused on revolutionizing the way Indian farmers access vital resources. Our goal is to create the One-Stop Application for Indian Farmers, a user-friendly web platform that combines crucial agricultural features.</p>
                <button className=' btn darkGreenbg ' style={{color:"white" , fontWeight: "500"}}>Learn More</button>
                 </div>
                 <div className="row d-flex justify-content-center text-center mt-4 p-2">
