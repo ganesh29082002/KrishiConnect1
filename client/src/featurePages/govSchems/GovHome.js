@@ -5,7 +5,7 @@ import "../../css/GovHome.css";
 import axios from 'axios'
 import NavigationBar from "../../components/CommonNavigation";
 import { useState , useEffect } from "react";
-import {useNavigate } from "react-router-dom";
+import {useNavigate ,Link } from "react-router-dom";
 export default function GovHome() {
     const navigate = useNavigate();
   // State to store form data
@@ -19,16 +19,39 @@ export default function GovHome() {
     city: "",
   });
 const [schemeData , setSchemedata ] = useState([]);
+const [filterRecords, setFilterRecords] = useState([]);
 
   const getgovschemes = async ()=>{
       const res =  await axios.get("http://localhost:8800/api/getgovschemes")
       console.log(res.data);
       setSchemedata(res.data);
+      setFilterRecords(res.data)
   }
 
   useEffect(() =>{
   getgovschemes()
   },[]);
+
+  const handleInputChange = (event) => {
+    const filterText = event.target.value.toLowerCase();
+  
+    if (filterText === 'all') {
+      // If the search query is "all," set the articalData to the original data
+      setSchemedata(filterRecords);
+    } else {
+      // Otherwise, filter the records based on the search query
+      const newData = filterRecords.filter(row => 
+        row.state.toLowerCase().includes(filterText) || 
+        row.type.toLowerCase().includes(filterText) ||
+        row.category.toLowerCase().includes(filterText) || 
+        (row.details.toLowerCase().includes(filterText) || row.name.toLowerCase().includes(filterText))
+
+
+      );
+  
+      setSchemedata(newData);
+    }
+  }
   return (
     <>
     <NavigationBar/>
@@ -52,8 +75,8 @@ const [schemeData , setSchemedata ] = useState([]);
         <div class="accordion container" id="accordionExample">
         <div className=" filtar-bar w-100 darkGreenbg mt-3  d-flex justify-content-center ">
           <div class="dropdown-container">
-            <select class="custom-select  px-1">
-              <option value="none" >
+            <select class="custom-select  px-1" onChange={handleInputChange}>
+              <option value="all" >
                 Select State
               </option>
               <option value="Andhra Pradesh">Andhra Pradesh</option>
@@ -87,8 +110,8 @@ const [schemeData , setSchemedata ] = useState([]);
             </select>
           </div>
           <div class="dropdown-container">
-            <select class="custom-select">
-              <option value="none" >
+            <select class="custom-select" onChange={handleInputChange}>
+              <option value="all" >
                 Government Type
               </option>
               <option value="State Government">State Government</option>
@@ -96,11 +119,11 @@ const [schemeData , setSchemedata ] = useState([]);
             </select>
           </div>
           <div class="dropdown-container">
-            <select class="custom-select" id="categorySelect">
-              <option value="none" >
+            <select class="custom-select" id="categorySelect" onChange={handleInputChange}>
+              <option value="all" >
                 Scheme Category
               </option>
-              <option value="none">All</option>
+              <option value="all">All</option>
               <option value="Agricultural Credit">Agricultural Credit</option>
               <option value="Animal Husbandry">Animal Husbandry</option>
               <option value="Agricultural Insurance">
@@ -136,46 +159,46 @@ const [schemeData , setSchemedata ] = useState([]);
             <input
               type="text"
               className="custom-select"
-              placeholder="&#128269; Search Crop details"
+              placeholder="&#128269; Search Crop details" onChange={handleInputChange}
             />
           </div>
         </div>
 
           {/* Scheme 1 */}
-          { schemeData.map((items)=>(
+          {schemeData.map((items, index) => (
+  <div className="card p-1 pb-0" key={index}>
+    <div className="card-header bg-white" id={`heading${index}`}>
+      <h6 className="mb-0 collapsebtn p-0">
+        <button
+          className="bg-white btn-block text-left collapsed p-1 collapsebtn mediumGreenText"
+          type="button"
+          data-toggle="collapse"
+          data-target={`#collapse${index}`}
+          aria-expanded="false"
+          aria-controls={`collapse${index}`}
+        >
+          {items.name}
+        </button>
+      </h6>
+    </div>
 
-         
-          <div className="card p-1 pb-0">
-            <div class="card-header bg-white " id="headingOne ">
-              <h6 class="mb-0 collapsebtn p-0">
-                <button
-                  class="bg-white btn-block text-left collapsed p-1 collapsebtn mediumGreenText"
-                  type="button"
-                  data-toggle="collapse"
-                  data-target="#collapseOne"
-                  aria-expanded="false"
-                  aria-controls="collapseOne"
-                >
-                 { items.name}
-                </button>
-           
-              </h6>
-            </div>
-            
-            <div
-              id="collapseOne"
-              class="collapse "
-              aria-labelledby="headingOne"
-              data-parent="#accordionExample"
-            >
-              <div class="card-body">
-                 { items.details}
-              
-              </div>
-            </div>
-            </div>
-          ))
-}
+    <div
+      id={`collapse${index}`}
+      className="collapse my-2"
+      aria-labelledby={`heading${index}`}
+      data-parent="#accordionExample"
+    >
+      <div className="card-body">{items.details}</div>
+      <div>
+      <Link to = {`${items.link}`}>
+      <button className="btn btn-success">Apply Scheme</button>
+      </Link>
+    </div>
+    </div>
+   
+  </div>
+))}
+
 
           {/* Scheme 2 */}
           {/* <div className="card p-1 pb-0">
