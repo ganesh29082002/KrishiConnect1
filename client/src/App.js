@@ -13,6 +13,7 @@ import './css/variable.css';
 import ApmcHomePage from './featurePages/apmc/ApmcHomePage';
 import AriticalHome from './featurePages/articles/AriticalHome';
 import ArticalsDescription from './featurePages/articles/ArticalsDescription';
+import CommunityHomePage from './featurePages/communitySupport/CommunityHomePage';
 
 function ScrollToTop() {
   const { pathname } = useLocation();
@@ -38,7 +39,7 @@ export default function App() {
       <Route path="/weather/home" element={<WeatherIndex />} />
       <Route path="/apmc/home" element={<ApmcHomePage/>} />
       <Route path="/articals/home" element={<AriticalHome/>} />
-      <Route path="/community/home" element={<AriticalHome/>} />
+      <Route path="/community/home" element={<CommunityHomePage/>} />
       <Route path="/articals/articalsdescription/:id" element={<ArticalsDescription />}/>
 
 
