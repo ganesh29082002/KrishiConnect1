@@ -16,7 +16,7 @@ export function UserProvider({ children }) {
     console.log("hii");
     // console.log(id)
     const  response = await getContextData(id);
-    console.log(response.data)
+    // console.log(response.data)
     setDetails(response);
   };
   return (
