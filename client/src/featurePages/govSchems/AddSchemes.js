@@ -132,8 +132,8 @@ const AddSchemes = () => {
                     onChange={onChangeHandler}
                   >
                     <option value="none">Type</option>
-                    <option value="state">State Government</option>
-                    <option value="central">Central Government</option>
+                    <option value="State Government">State Government</option>
+                    <option value="Central Government">Central Government</option>
                   </select>
                 </div>
               </div>
