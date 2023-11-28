@@ -3,7 +3,7 @@ import React, { useState, useEffect } from 'react';
 
 import io from 'socket.io-client';
 
-const socket = io('http://localhost:8800'); // Connect to your server
+const socket = io('https://krushi-connect-backend.onrender.com/'); // Connect to your server
 export default function ChatContainer({ username }) {
 
     const [messages, setMessages] = useState([]);

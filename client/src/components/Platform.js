@@ -14,7 +14,7 @@ function ServiceSection() {
 //   const value1=details.data.email;
 //   const value2=details.data.password;
 // const url = `http://localhost:3000/?value1=${value1}&value2=${value2}`;
-const url = `http://localhost:3000/`
+const url = `https://krishiconnect-ecommerce.cyclic.app/`
   return (
 
     <section  className="text-center">

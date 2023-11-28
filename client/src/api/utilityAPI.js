@@ -26,7 +26,7 @@
 
 import axios from 'axios';
 
-const URL = 'http://localhost:8800';
+const URL = 'https://krushi-connect-backend.onrender.com';
 
 export const uploadArticals = async(file,inputformData) => {
   console.log(inputformData)

@@ -28,7 +28,7 @@ const AddSchemes = () => {
      e.preventDefault();
 
      const res = await axios.post(
-        "http://localhost:8800/api/addgovschemes",
+        "https://krushi-connect-backend.onrender.com/api/addgovschemes",
         user,
         {
           headers: {

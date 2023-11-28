@@ -22,7 +22,7 @@ console.log(email);
   const handleVerifyClick = async () => {
     try {
       //verify otp post request
-      const data = await axios.post("http://localhost:8800/api/verifyOtp", {
+      const data = await axios.post("https://krushi-connect-backend.onrender.com/api/verifyOtp", {
         otp,
         email,
       });

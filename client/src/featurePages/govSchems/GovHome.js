@@ -22,7 +22,7 @@ const [schemeData , setSchemedata ] = useState([]);
 const [filterRecords, setFilterRecords] = useState([]);
 
   const getgovschemes = async ()=>{
-      const res =  await axios.get("http://localhost:8800/api/getgovschemes")
+      const res =  await axios.get("https://krushi-connect-backend.onrender.com/api/getgovschemes")
       console.log(res.data);
       setSchemedata(res.data);
       setFilterRecords(res.data)

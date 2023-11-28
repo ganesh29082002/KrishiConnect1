@@ -50,7 +50,7 @@ const [loading, setLoading] = useState(false);
     try {
       // send data to backend and store it in data 
       const data = await axios.post(
-        "http://localhost:8800/api/register",
+        "https://krushi-connect-backend.onrender.com/api/register",
         formData,
         {
           headers: {
@@ -114,7 +114,7 @@ const [loading, setLoading] = useState(false);
     // set loading true
     setLoading(true);
     try {
-      const response = await axios.get("http://localhost:8800/api", {
+      const response = await axios.get("https://krushi-connect-backend.onrender.com/api", {
         headers: {
           Authorization: `${localStorage.getItem("access_token")}`,
         },
@@ -166,7 +166,7 @@ const [loading, setLoading] = useState(false);
     setLoading(true);
 
     try {
-      const data = await axios.post("http://localhost:8800/api/login", formData);
+      const data = await axios.post("https://krushi-connect-backend.onrender.com/api/login", formData);
 
       if (data.status === 200) {
         setLoading(false);
