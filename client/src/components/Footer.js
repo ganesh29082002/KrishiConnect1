@@ -13,7 +13,7 @@ const Footer = () => {
 
       {/* <!-- Section: Links  --> */}
       <section className="darkGreenbg text-white">
-        <div className="container text-center text-white text-md-start mt-2">
+        <div className=" text-center text-white text-md-start mt-2">
           {/* <!-- Grid row --> */}
           <div className="row mt-1">
             {/* <!-- Grid column --> */}
