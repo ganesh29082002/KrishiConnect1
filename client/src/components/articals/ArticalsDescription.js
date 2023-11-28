@@ -46,25 +46,25 @@ export default function ArticalsDescription() {
 
         <div className="row mt-3 justify-content-center ">
           <div className="col-md-4 ">
-            <img src={farmer1} alt="" srcset="" />
+            <img  src={`/${data.filename}`}  style={{height:"250px"}}alt="" srcset="" />
           </div>
 
-          <div className="col-md-7 mx-2 mt-2 bg-white bordar mediumGreenText "> <p>{data.thumbnaiText}</p> </div>
+          <div className="col-md-7 mx-2 mt-2 bg-white bordar mediumGreenText "> <p>{data.paragraphOne}</p> </div>
         </div>
 
         <div className="row mt-3 justify-content-center ">
          
           <div className="col-md-7  mb-2 mx-2 darkGreenbg bordar bordar-rounded ">
-           <p>{data.paragraphOne}</p>
+           <p>{data.paragraphTwo}</p>
           </div>
           <div className="col-md-4 ">
-            <img src={farmer1} alt="" srcset="" />
+            <img  src={`/${data.filename}`} style={{height:"250px"}} alt="" srcset="" />
           </div>
 
         </div>
         <div className="row mt-3 justify-content-center">
           <div className="col-md-9  mb-3 " style={{background:"white"}}>
-          <p className='mediumGreenText' >{data.paragraphOne}</p>
+          <p className='mediumGreenText' >{data.paragraphTwo}</p>
           </div>
         </div>
         <div className="row justify-content-center darkGreenbg " > 
