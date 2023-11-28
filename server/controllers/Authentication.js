@@ -87,11 +87,13 @@ const register = async (req, res, next) => {
     // Create user in our database
     const user = await User.create({
       fullname,
+      name:fullname,
       email: email.toLowerCase().trim(), // sanitize: convert email to lowercase
       password: encryptedPassword,
-      role,
-      phoneno,
-      city
+      roleganesh:role,
+      role:role,
+      phone:phoneno,
+      address:city
 
     });
 
