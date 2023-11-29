@@ -8,7 +8,8 @@ const uploadArtical = async (req, res) => {
       return res.status(400).json({  message:"All input Feild Are Required"});
       
     }
-    const { filename, path } = req.file;
+    // const { filename, path } = req.file;
+    const path = req.file;
     // const formData = JSON.parse(req.body.data);
     const formData = JSON.parse(req.body.data);
 console.log("Hello from backend");
@@ -21,7 +22,7 @@ console.log("Hello from backend");
         paragraphTwo: formData.paragraph2,
         category: formData.category,
         path:path,
-        filename:filename,
+        // filename:filename,
 
     });
     // save user token
