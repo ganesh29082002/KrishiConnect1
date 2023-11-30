@@ -10,7 +10,7 @@ export default function ArticalsForm({ sendDataToParent }) {
   const [currentDate, setCurrentDate] = useState("");
   const [file, setFile] = useState(null);
 const [auth, setauth] = useState(false);
-
+const [url, setUrl] = useState(null);
   // usestate for set input data
   const [formData, setFormData] = useState({
     title: "",
@@ -110,6 +110,9 @@ const [auth, setauth] = useState(false);
         // Upload completed successfully, now we can get the download URL
         getDownloadURL(uploadTask.snapshot.ref).then((downloadURL) => {
           console.log('File available at', downloadURL);
+          // setFile(downloadURL)
+          setUrl(downloadURL)
+
         });
       }
     );
@@ -121,7 +124,7 @@ const [auth, setauth] = useState(false);
   };
 
   const onSubmit = async (e) => {
-    await uploadArticals(file, formData);
+    await uploadArticals(url, formData);
     handleSendDataToParent();
   };
 
