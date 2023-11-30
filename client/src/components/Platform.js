@@ -72,7 +72,7 @@ const url = `https://krishiconnect-ecommerce.cyclic.app/`
               <img src={weather} alt="" />
               <h5>Weather Updates</h5>
               <p className=' lightGreenText'>
-              Real-time weather forecasts for informed decision-making.
+              Real-time weather Information for informed decision-making.
               </p>
             </div >
             </Link>
