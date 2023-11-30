@@ -4,24 +4,25 @@ require("dotenv").config();
 
 const uploadArtical = async (req, res) => {
     const { title, thumbnaiText,paragraph1, paragraph2, category} = JSON.parse(req.body.data);
-    if (!(title && thumbnaiText && paragraph1 && paragraph2 && category )) {
-      return res.status(400).json({  message:"All input Feild Are Required"});
+    // if (!(title && thumbnaiText && paragraph1 && paragraph2 && category )) {
+    //   return res.status(400).json({  message:"All input Feild Are Required"});
       
-    }
-    const { filename, path } = req.file;
+    // }
+    // const { filename, path } = req.file;
     // const formData = JSON.parse(req.body.data);
-    const formData = JSON.parse(req.body.data);
+    // const formData = JSON.parse(req.body.data);
 console.log("Hello from backend");
     try {
 
     const artical = await ArticalSchema.create({
-        title : formData.title,
-        thumbnaiText: formData.thumbnaiText,
-        paragraphOne : formData.paragraph1,
-        paragraphTwo: formData.paragraph2,
-        category: formData.category,
-        path:path,
-        filename:filename,
+      title : req.body.title,
+      thumbnaiText: req.body.thumbnaiText,
+      paragraphOne : req.body.paragraph1,
+      paragraphTwo: req.body.paragraph2,
+      category: req.body.category,
+      path:req.body.file,
+      // filename:filename,
+
 
     });
     // save user token
