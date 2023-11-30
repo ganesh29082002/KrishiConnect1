@@ -548,7 +548,7 @@ const Weather = () => {
                 <div className="col-md-10">
                   <div class="card  p-1 shadow-sm">
                     <div class="card-body text-success text-center">
-                      this is for next 10 days tempreture
+                      this is for next 10 days temperature
                     </div>
                   </div>
                 </div>
@@ -558,7 +558,7 @@ const Weather = () => {
         </div>
       <div className="mt-5 text-center">
         <h2 className="mt-3 darkGreenText font-weight-bolder">
-          Get Crop Suggestion Here
+          Get Crop Information
         </h2>
         <div className="w-100 darkGreenbg mt-3 p-2 d-flex justify-content-around ">
           <div class="dropdown-container">

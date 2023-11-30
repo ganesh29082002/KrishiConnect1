@@ -109,7 +109,7 @@ export default function AriticalHome() {
             <input
               type="text"
               className="custom-select"
-              placeholder="&#128269; Search Crop details"
+              placeholder="&#128269; Search Artical details"
               onChange={handleInputChange}
             />
           </div>

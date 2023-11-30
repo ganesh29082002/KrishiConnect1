@@ -55,7 +55,7 @@ export default function ChatContainer({ username }) {
   return (
    
     <>
-      <div class="chat__section">
+      <div class="chat__section mt-5">
         <div class="brand">
             <img height="" style={{height:"50x", width:"50px"}} src="/wassup.png" alt=""/>
             <h1>Community Support</h1>

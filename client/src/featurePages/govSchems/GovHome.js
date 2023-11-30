@@ -159,7 +159,7 @@ const [filterRecords, setFilterRecords] = useState([]);
             <input
               type="text"
               className="custom-select"
-              placeholder="&#128269; Search Crop details" onChange={handleInputChange}
+              placeholder="&#128269; Search Scheme Here" onChange={handleInputChange}
             />
           </div>
         </div>
@@ -190,6 +190,9 @@ const [filterRecords, setFilterRecords] = useState([]);
     >
       <div className="card-body">{items.details}</div>
       <div>
+      <Link to = "https://www.indiansugar.com/PDFS/GOVERNMENT_SCHEMES_FOR_AGRICULTURE__Revised-26.12.2019.pdf">
+      <button className="btn darkGreenbg mx-3">More Details</button>
+      </Link>
       <Link to = {`${items.link}`}>
       <button className="btn btn-success">Apply Scheme</button>
       </Link>
