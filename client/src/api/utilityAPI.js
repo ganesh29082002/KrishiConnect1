@@ -28,18 +28,21 @@ import axios from 'axios';
 
 const URL = 'https://krushi-connect-backend.onrender.com';
 
-export const uploadArticals = async(file,inputformData) => {
+export const uploadArticals = async(url,inputformData) => {
   console.log(inputformData)
-    const formData = new FormData();
-    formData.append("file", file);
-    formData.append("data", JSON.stringify(inputformData));
+  console.log(url)
+  const formdata ={
+    ...inputformData,
+    file:url
+  }
+  // const formData = new FormData();
+  // formData.append("file", url);
+  // formData.append("data", JSON.stringify(inputformData));
+  console.log("hiii")
+   console.log(formdata);
 
     try {
-     const data = await axios.post(`${URL}/articalapi/uploadartical`, formData, {
-        headers: {
-          "Content-Type": "multipart/form-data",
-        },
-      });
+     const data = await axios.post(`${URL}/articalapi/uploadartical`, formdata);
       alert("File uploaded successfully");
     } catch (error) {
       alert(error.message);
