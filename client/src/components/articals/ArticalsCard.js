@@ -16,7 +16,7 @@ export default function ArticalsCard({ data }) {
       {isDataAvailable ? (
       <div class="col mb-3 mt-3 ">
         <div class="card h-100 shadow">
-          <img src={farmar1}  class="card-img-top img-fluid" style={{height:"220px"}} alt="..." />
+          <img src={`${data.path}`}  class="card-img-top img-fluid" style={{height:"220px"}} alt="..." />
           <div class="card-body mb-0">
             <h5 class="card-title">{data.title}</h5>
             <p class="card-text">
